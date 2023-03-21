@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-size: cover;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 1px;
+    font-family: "Quicksand", sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #7f7fd5;
+    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  nav {
+    height: 40px;
+    margin: 40px auto;
+    background-color: rgba(23, 23, 50, 0);
+    text-align: center;
+    border-radius: 4px;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main>li {
+    margin: 0 2%;
+  }
+  
+  .main>li a {
+    border-left: 1px solid rgba(23, 23, 50, 0);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffe;
+    text-transform: capitalize;
+    font-family: monospace;
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background-color 0.5s ease-in-out;
+  
+    font-family: "Raleway", sans-serif;
+  }
+  
+  a:hover {
+    background-color: #183663;
+  }
+  
+  .drop li {
+    opacity: 0;
+    transform-origin: top center;
+  }
+  
+  .drop li a {
+    background-color: rgba(23, 23, 50, 0);
+    padding: 10px 0;
+  }
+  
+  /*------------- menu1 animation -------------------*/
+  
+  .main li:hover .menu1 li:first-of-type {
+    animation: menu1 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .main li:hover .menu1 li:nth-of-type(2) {
+    animation: menu1 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .main li:hover .menu1 li:nth-of-type(3) {
+    animation: menu1 0.3s ease-in-out forwards;
+    animation-delay: 0.9s;
+  }
+  
+  .main li:hover .menu1 li:last-of-type {
+    animation: menu1 0.3s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes menu1 {
+    from {
+      opacity: 0;
+      transform: translateX(30px) rotateY(90deg);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0) rotateY(0);
+    }
+  }
+  
+  /*------------- menu2 animation -------------------*/
+  
+  .main li:hover .menu2 li:first-of-type {
+    animation: menu2 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .main li:hover .menu2 li:nth-of-type(2) {
+    animation: menu2 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .main li:hover .menu2 li:nth-of-type(3) {
+    animation: menu2 0.3s ease-in-out forwards;
+    animation-delay: 0.9s;
+  }
+  
+  .main li:hover .menu2 li:last-of-type {
+    animation: menu2 0.3s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes menu2 {
+    0% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+  
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /*------------- menu3 animation -------------------*/
+  
+  .main li:hover .menu3 li:first-of-type {
+    animation: menu3 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .main li:hover .menu3 li:nth-of-type(2) {
+    animation: menu3 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .main li:hover .menu3 li:nth-of-type(3) {
+    animation: menu3 0.3s ease-in-out forwards;
+    animation-delay: 0.9s;
+  }
+  
+  .main li:hover .menu3 li:last-of-type {
+    animation: menu3 0.3s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes menu3 {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /*------------- menu4 animation -------------------*/
+  
+  .main li:hover .menu4 li:first-of-type {
+    animation: menu4 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .main li:hover .menu4 li:nth-of-type(2) {
+    animation: menu4 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .main li:hover .menu4 li:nth-of-type(3) {
+    animation: menu4 0.3s ease-in-out forwards;
+    animation-delay: 0.9s;
+  }
+  
+  .main li:hover .menu4 li:last-of-type {
+    animation: menu4 0.3s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes menu4 {
+    0% {
+      opacity: 0;
+      transform: translateX(50px) rotate(-90deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0) rotate(0);
+    }
+  }
+  
+  /*------------- menu5 animation -------------------*/
+  
+  .main li:hover .menu5 li:first-of-type {
+    animation: menu5 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .main li:hover .menu5 li:nth-of-type(2) {
+    animation: menu5 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .main li:hover .menu5 li:nth-of-type(3) {
+    animation: menu5 0.3s ease-in-out forwards;
+    animation-delay: 0.9s;
+  }
+  
+  .main li:hover .menu5 li:last-of-type {
+    animation: menu5 0.3s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes menu5 {
+    0% {
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+  
+  /*------------- menu6 animation -------------------*/
+  
+  .main li:hover .menu6 li:first-of-type {
+    animation: menu6 0.3s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .main li:hover .menu6 li:nth-of-type(2) {
+    animation: menu6 0.3s ease-in-out forwards;
+    animation-delay: 0.4s;
+  }
+  
+  .main li:hover .menu6 li:nth-of-type(3) {
+    animation: menu6 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .main li:hover .menu6 li:last-of-type {
+    animation: menu6 0.3s ease-in-out forwards;
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes menu6 {
+    0% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* my button style */
+  .white-mode {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: #122;
+    border-radius: 3px;
+    color: #fff;
+    transition: 0.35s ease-in-out;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-family: sans-serif;
+  }
+  
+  .white-mode:hover {
+    background-color: #fff;
+    color: #122;
+  }
+  
+  /* Cards */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #ECE9E6;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  
+  }
+  
+  
+  
+  .card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  
+  .tag {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+  }
+  
+  .tag+.tag {
+    margin-left: .5em;
+  }
+  
+  .tag-blue {
+    background: #56CCF2;
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+    color: #fafafa;
+  }
+  
+  .tag-brown {
+    background: #D1913C;
+    background: linear-gradient(to bottom, #FFD194, #D1913C);
+    color: #fafafa;
+  }
+  
+  .tag-red {
+    background: #413f3f;
+    background: linear-gradient(to bottom, #474545, #0e0e0e);
+    color: #fafafa;
+  }
+  
+  .card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+  
+  .card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+  
+  .user__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .user__info>small {
+    color: #666;
+  }
+  
+  #message .text {
+    height: 400px;
+    width: 400px;
+  }
+  
+  button {
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgba(17, 34, 34, 0);
+    padding: 10px;
+  }
+  
+  /* CSS to hide the form by default and display it when the button is clicked */
+  .hidden {
+    display: none;
+  }
+  
+  /* CSS for styling the form and its elements */
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  button[type="submit"] {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #005F6B;
+  }
+  
+  #message-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #card-form {
+    float: left;
+  }
+  
+  .container {
+    float: right;
+  }
+  
+  button {
+    background-color: #4c6baf;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .comment__button {
+    background-color: #fff;
+    color: #555;
+    border: 2px solid #555;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .comment__button:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .comment__button:active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+  }
+  
+  .comment__box {
+    display: none;
+    margin-top: 16px;
+  }
+  
+  .comment__input {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .comment__submit {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .comment__submit:hover {
+    background-color: #3e8e41;
+  }
+  
+  .comment__submit:active {
+    background-color: #367c39;
+  }

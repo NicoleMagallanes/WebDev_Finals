@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Dev Finals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1e09c300f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>Web Dev Finals LOGO</h1>
+    <nav>
+        <ul class="main">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li><a href="blog.html">Blog</a>
+                <ul class="drop menu1">
+                    <li><button onclick="showForm()">Show Form</button></li>
+                </ul>
+            </li>
+            <li><a href="news.html">News</a>  
+            </li>
+            <li><a href="#">team</a>
+            </li>
+            <li><a href="#">about</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <form id="card-form" style="display: none;">
+        <label for="card-header">Card Header:</label>
+        <input type="text" id="card-header">
+        <label for="message">Message:</label>
+        <textarea id="message"></textarea>
+        <label for="card-image">Card Image:</label>
+        <input type="text" id="card-image">
+        <label for="user-image">User Image:</label>
+        <input type="text" id="user-image">
+        <label for="user-info">User Info:</label>
+        <input type="text" id="user-info">
+        <button type="submit">Create Card</button>
+    </form>
+
+    <div id="message-container" ></div>
+    <div class="container" hidden>
+        <div class="card">
+            <div class="card__header">
+                <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image"
+                    width="600">
+            </div>
+            <div class="card__body">
+                <span class="tag tag-blue">Technology</span>
+                <h4>What's new in 2022 Tech</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
+                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
+            </div>
+            <div class="card__footer">
+                <div class="user">
+                    <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+                    <div class="user__info">
+                        <h5>Jane Doe</h5>
+                        <small>2h ago</small>
+                    </div>
+                </div>
+            </div>
+            <button class="comment__button" onclick="toggleCommentBox()">Comment</button>
+            <div class="comment__box">
+                <textarea class="comment__input" placeholder="Add your comment"></textarea>
+                <button class="comment__submit" onclick="submitComment()">Submit</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__header">
+                <img src="https://source.unsplash.com/600x400/?food" alt="card__image" class="card__image" width="600">
+            </div>
+            <div class="card__body">
+                <span class="tag tag-brown">Food</span>
+                <h4>Delicious Food</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
+                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
+            </div>
+            <div class="card__footer">
+                <div class="user">
+                    <img src="https://i.pravatar.cc/40?img=2" alt="user__image" class="user__image">
+                    <div class="user__info">
+                        <h5>Jony Doe</h5>
+                        <small>Yesterday</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__header">
+                <img src="https://source.unsplash.com/600x400/?car,automobile" alt="card__image" class="card__image"
+                    width="600">
+            </div>
+            <div class="card__body">
+                <span class="tag tag-red">Automobile</span>
+                <h4>Race to your heart content</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo
+                    doloribus. Doloremque, nihil! At ea atque quidem!</p>
+            </div>
+            <div class="card__footer">
+                <div class="user">
+                    <img src="https://i.pravatar.cc/40?img=3" alt="user__image" class="user__image">
+                    <div class="user__info">
+                        <h5>John Doe</h5>
+                        <small>2d ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCommentBox() {
+            var commentBox = document.querySelector('.comment__box');
+            if (commentBox.style.display === 'none') {
+                commentBox.style.display = 'block';
+            } else {
+                commentBox.style.display = 'none';
+            }
+        }
+        function showForm() {
+            document.getElementById("card-form").style.display = "block";
+        }
+        document.getElementById("card-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // prevent form submission
+            document.getElementById("card-form").style.display = "none";
+        });
+
+        // Get the form and message container elements
+        const form = document.querySelector('form');
+        const messageContainer = document.querySelector('#message-container');
+
+        // Add an event listener to the form to listen for submit events
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the form from submitting and reloading the page
+
+            // Get the value of the message input field
+            const messageInput = document.querySelector('#message');
+            const message = messageInput.value;
+
+            // Get the value of the card header input field
+            const cardHeaderInput = document.querySelector('#card-header');
+            const cardHeader = cardHeaderInput.value;
+
+            // Get the value of the card image input field
+            const cardImageInput = document.querySelector('#card-image');
+            const cardImage = cardImageInput.value;
+
+            // Get the value of the user image input field
+            const userImageInput = document.querySelector('#user-image');
+            const userImage = userImageInput.value;
+
+            // Get the value of the user info input field
+            const userInfoInput = document.querySelector('#user-info');
+            const userInfo = userInfoInput.value;
+
+            // Create a new card element
+            const cardElement = document.createElement('div');
+            cardElement.classList.add('card');
+
+            // Create the card header element and add the image
+            const cardHeaderElement = document.createElement('div');
+            cardHeaderElement.classList.add('card__header');
+            const imageElement = document.createElement('img');
+            imageElement.src = cardImage;
+            imageElement.alt = 'card__image';
+            imageElement.classList.add('card__image');
+            cardHeaderElement.appendChild(imageElement);
+            cardElement.appendChild(cardHeaderElement);
+
+            // Create the card body element and add the message
+            const cardBodyElement = document.createElement('div');
+            cardBodyElement.classList.add('card__body');
+            const tagElement = document.createElement('span');
+            tagElement.classList.add('tag', 'tag-red');
+            tagElement.textContent = cardHeader;
+            const titleElement = document.createElement('h4');
+            titleElement.textContent = message;
+            const messageElement = document.createElement('p');
+            messageElement.textContent = message;
+            cardBodyElement.appendChild(tagElement);
+            cardBodyElement.appendChild(titleElement);
+            cardBodyElement.appendChild(messageElement);
+            cardElement.appendChild(cardBodyElement);
+
+            // Create the card footer element and add the user information
+            const cardFooterElement = document.createElement('div');
+            cardFooterElement.classList.add('card__footer');
+            const userElement = document.createElement('div');
+            userElement.classList.add('user');
+            const userImageElement = document.createElement('img');
+            userImageElement.src = userImage;
+            userImageElement.alt = 'user__image';
+            userImageElement.classList.add('user__image');
+            const userInfoElement = document.createElement('div');
+            userInfoElement.classList.add('user__info');
+            const usernameElement = document.createElement('h5');
+            usernameElement.textContent = userInfo;
+            const timeElement = document.createElement('small');
+            timeElement.textContent = 'Now';
+            userInfoElement.appendChild(usernameElement);
+            userInfoElement.appendChild(timeElement);
+            userElement.appendChild(userImageElement);
+            userElement.appendChild(userInfoElement);
+            cardFooterElement.appendChild(userElement);
+            cardElement.appendChild(cardFooterElement);
+
+            // Add the new card element to the message container
+            messageContainer.appendChild(cardElement);
+
+            // Clear the input fields
+            messageInput.value = '';
+            cardHeaderInput.value = '';
+            cardImageInput.value = '';
+            userImageInput.value = '';
+            userInfoInput.value = '';
+
+
+        });
+    </script>
+
+</body>
+
+</html>
